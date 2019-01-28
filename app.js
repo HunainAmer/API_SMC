@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var body_parser = require('body-parser');
+var port = process.env.PORT || 3000;
 var ABI = require('./ABI.js');
 
 
@@ -149,5 +150,5 @@ var ABI = require('./ABI.js');
 
     
 app.use('/',router);
-app.listen(3000);
+app.listen(port);
 console.log('app is listining on port 3000');
